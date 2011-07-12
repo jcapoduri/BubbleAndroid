@@ -433,11 +433,11 @@ loader.readyLoad = function(){
 	document.getElementById('softgamesLogoImg').style.display = 'block';
 	setTimeout(function(){
 		//document.getElementById('backgroundNav').style.backgroundImage = 'url('+backgroundImage.src+')';
-		document.getElementById('FBnav').style.display = 'block';
+		//document.getElementById('FBnav').style.display = 'block';
 		$('#frameBackground')[0].style.display = 'block';
 		setTimeout(function(){
-			var p = $("#initScreen").remove();
-			delete p;
+			$("#initScreen").remove();
+			//delete p;
 			connectToFacebook();
 		},1000);
 	}, 6000);
