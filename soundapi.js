@@ -177,9 +177,12 @@ soundengine.backgroundsound.duration = 1000;
 soundengine.backgroundsound.media = null;
 soundengine.backgroundsound.timer = null;
 
-soundengine.startbackground = function(file, duration){
+soundengine.setupbackground = function(file, duration){
 	soundengine.backgroundsound.media = new Media(file);
 	soundengine.backgroundsound.duration = duration;
+};
+
+soundengine.startbackground = function(){
 	if(!soundengine.enable) return;
 	soundengine.backgroundsound.loop();
 };
