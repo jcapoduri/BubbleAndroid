@@ -1,0 +1,940 @@
+@font-face {
+	font-family: Bubblegum;
+	src: url(../grobold.ttf);
+}
+
+/*
+*		360x480
+*/
+
+.pointsFrame360x480{
+	background-image: url("../360x480/points.png");
+	color: #4E3E2D;
+	font-family: Bubblegum;
+	font-size: 0.8em;
+	height: 76px;
+	left: 135px;
+	min-height: 50px;
+	padding-top: 35px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 95px;
+}
+
+.levelsFrame360x480{
+	background-image: url("../360x480/lvl.png");
+	color: #4E3E2D;
+	font-family: Bubblegum;
+	font-size: 0.8em;
+	height: 54px;
+	left: 267px;
+	min-height: 20px;
+	padding-left: 44px;
+	padding-top: 33px;
+	position: fixed;
+	top: 400px;
+	width: 91px;
+}
+
+.lifesFrame360x480{
+	background-image: url("../360x480/life.png");
+	color: #FFFFFF;
+	font-family: Bubblegum;
+	font-size: 0.8em;
+	height: 57px;
+	left: 8px;
+	min-height: 20px;
+    padding-left: 35px;
+    padding-top: 17px;
+	position: fixed;
+	top: 0;
+	width: 71px;
+}
+
+.gobackFrame360x480{
+    background-image: url("../360x480/backbutton.png");
+    color: #4E3E2D;
+    font-family: Bubblegum;
+    font-size: 0.8em;
+    height: 38px;
+    left: 4px;
+    min-height: 10px;
+    position: fixed;
+    top: 35px;
+    width: 102px;
+}
+
+.guiCoinsFrame360x480{
+	background-image: url("../360x480/guicoins.png");
+	color: #644000;
+	font-family: Bubblegum;
+	font-size: 0.8em;
+	height: 39px;
+	left: 255px;
+	padding-left: 14px;
+	padding-top: 12px;
+	position: fixed;
+	text-align: left;
+	top: 24px;
+	width: 84px;
+}
+
+.guiBuyCoinsFrame360x480{
+	background-image: url("../360x480/guibuycoins.png");
+	height: 36px;
+	left: 293px;
+	position: fixed;
+	top: 34px;
+	width: 42px;
+}
+
+.guiBuyFreezeFrame360x480{
+	background-image: url("../360x480/guibuyfreeze.png");
+    color: #644000;
+    font-family: Bubblegum;
+    font-size: 0.6em;
+    height: 70px;
+    left: 300px;
+    padding-left: 30px;
+    padding-top: 45px;
+    position: fixed;
+    top: 170px;
+    width: 62px;
+}
+
+.guiBuyBombFrame360x480{
+	background-image: url("../360x480/guibuybomb.png");
+    color: #644000;
+    font-family: Bubblegum;
+    font-size: 0.6em;
+    height: 70px;
+    left: 300px;
+    padding-left: 32px;
+    padding-top: 51px;
+    position: fixed;
+    top: 230px;
+    width: 62px;
+}
+
+.guiBuyMultiFrame360x480{
+    background-image: url("../360x480/guibuymulti.png");
+    color: #644000;
+    font-family: Bubblegum;
+    font-size: 0.6em;
+    height: 70px;
+    left: 300px;
+    padding-left: 32px;
+    padding-top: 38px;
+    position: fixed;
+    top: 110px;
+    width: 62px;
+}
+
+.guiPointsLeftFrame360x480{
+	background-color: #FFFFFF;
+	height: 287px;
+	left: 338px;
+	position: fixed;
+	top: 110px;
+	width: 7px;
+}
+
+.guiNextBallFrame360x480
+{
+	left: 112px;
+	position: fixed;
+	top: 438px;
+}
+
+.guiPandaBag360x480{
+	position: fixed;
+	background-image: url(../360x480/pandabag.png);
+	top: 440px;
+	left: 98px;
+	width: 60px;
+	height: 43px;
+	/*z-index: ;*/
+}
+
+.facebookFrame360x480{
+	background-image: url("../360x480/facebook.png");
+	height: 58px;
+	left: 255px;
+	min-height: 47px;
+	position: fixed;
+	top: 319px;
+	width: 105px;
+}
+
+.coinsFrame360x480{
+	background-image: url("../360x480/coins.png");
+	height: 66px;
+	left: 262px;
+	min-height: 46px;
+	position: fixed;
+	top: 390px;
+	width: 98px;
+}
+
+.addFriends360x480{
+    background-image: url("../360x480/addfriends.png");
+    height: 74px;
+    left: 254px;
+    min-height: 46px;
+    position: fixed;
+    top: 379px;
+    width: 111px;
+}
+
+.leaderboardFrame360x480{
+	background-image: url("../360x480/leaderboards.png");
+	height: 57px;
+	left: 262px;
+	min-height: 56px;
+	position: fixed;
+	top: 249px;
+	width: 98px;
+}
+
+.playImage360x480{
+	background-image: url("../360x480/newbutton.png");
+	height: 54px;
+	left: 84px;
+	min-height: 20px;
+	position: fixed;
+	right: auto;
+	top: 193px;
+	width: 152px;
+}
+
+.continueImage360x480{
+	background-image: url("../360x480/continuebutton.png");
+	height: 66px;
+	left: 83px;
+	min-height: 20px;
+	position: fixed;
+	top: 273px;
+	width: 163px;
+}
+
+.optionsImage360x480{
+	background-image: url("../360x480/optionbutton.png");
+	height: 58px;
+	left: 104px;
+	min-height: 20px;
+	position: fixed;
+	right: auto;
+	top: 352px;
+	width: 151px;
+}
+
+.facebookButton360x480{
+	background-image: url("../360x480/facebookbutton.png");
+	height: 29px;
+	left: 143px;
+	min-height: 25px;
+	position: fixed;
+	top: 344px;
+	width: 177px;
+}
+
+.loadingProgressBar360x480{
+	height: 8px;
+	left: 117px;
+	position: fixed;
+	top: 289px;
+	width: 146px;
+}
+
+.panda360x480{
+    left: 112px;
+    position: fixed;
+    top: 430px;
+}
+
+.guiProgressBar360x480{
+    height: 292px;
+    left: -7px;
+    position: fixed;
+    top: 160px;
+    width: 60px;
+}
+
+.guiProgressBar360x480 > div{
+    background-image: url("../360x480/progressbar.png");
+    background-position: center top;
+    bottom: 0;
+    position: absolute;
+    top: auto;
+    width: 100%;
+}
+
+.panda360x480{
+	position: fixed;
+	/*width: 90px;
+	height: 111px;
+	min-height: 111px;*/
+	left: 80px;
+	top: 370px;
+}
+
+.guiFinishPoints360x480{
+    color: #644000;
+    font-family: Bubblegum;
+    font-size: 0.8em;
+    height: 20px;
+    left: 45px;
+    position: fixed;
+    text-align: center;
+    top: 260px;
+    width: 67px;
+}
+
+.guiFinishRank360x480{
+    font-family: Bubblegum;
+    font-size: 0.9em;
+    height: 20px;
+    left: 145px;
+    position: fixed;
+    text-align: center;
+    top: 260px;
+    width: 67px;
+}
+
+.guiFinishLevel360x480{
+    font-family: Bubblegum;
+    font-size: 0.9em;
+    height: 20px;
+    left: 233px;
+    position: fixed;
+    text-align: center;
+    top: 259px;
+    width: 65px;
+}
+
+.guiFinishLifes360x480{
+    color: #FFFFFF;
+    font-family: Bubblegum;
+    font-size: 0.9em;
+    height: 20px;
+    left: 73px;
+    position: fixed;
+    text-align: center;
+    top: 192px;
+    width: 65px;
+}
+
+.guiFinishCoins360x480{
+    font-family: Bubblegum;
+    font-size: 0.9em;
+    height: 26px;
+    left: 200px;
+    position: fixed;
+    text-align: center;
+    top: 190px;
+    width: 74px;
+}
+
+.guiFinishMoreCoins360x480{
+    /*background-image: url("../360x480/guiaddbutton.png");*/
+    height: 33px;
+    left: 276px;
+    position: fixed;
+    top: 198px;
+    width: 33px;
+}
+
+.guiFinishMultiCount360x480{
+    font-family: Bubblegum;
+    font-size: 0.6em;
+    height: 12px;
+    left: 120px;
+    position: fixed;
+    top: 309px;
+    width: 13px;
+}
+
+.guiFinishBombCount360x480{
+    font-family: Bubblegum;
+    font-size: 0.6em;
+    height: 12px;
+    left: 210px;
+    position: fixed;
+    top: 309px;
+    width: 13px;
+}
+
+.guiFinishFreezeCount360x480{
+    font-family: Bubblegum;
+    font-size: 0.6em;
+    height: 12px;
+    left: 300px;
+    position: fixed;
+    top: 309px;
+    width: 13px;
+}
+
+.guiLooseScreen360x480{
+	background-image: url(../360x480/guiloose.png);	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 360px;
+	height: 375px;
+}	
+
+.guiWinScreen360x480{
+	background-image: url(../360x480/guiwin.png);	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 360px;
+	height: 365px;
+}
+
+.guiLooseContinue360x480{
+    background-image: url("../360x480/guicontinueloose.png");
+    height: 110px;
+    left: 90px;
+    min-height: 110px;
+    position: fixed;
+    top: 344px;
+    width: 157px;
+}
+
+.guiWinContinue360x480{
+	position: fixed;
+	background-image: url(../360x480/guicontinuewin.png);
+	width: 157px;
+	height: 110px;
+	min-height: 110px;
+	left: 90px;
+	top: 345px;
+}
+
+.guiFinishBuyMulti360x480{
+    background-image: url("../360x480/guibuycoins.png");
+    left: 93px;
+	height: 30px;
+	position: fixed;
+	top: 321px;
+	width: 41px;
+}
+
+.guiFinishBuyFreeze360x480{
+    background-image: url("../360x480/guibuycoins.png");
+    height: 30px;
+	left: 268px;
+	position: fixed;
+	top: 321px;
+	width: 40px;
+}
+
+.guiFinishBuyBomb360x480{
+    background-image: url("../360x480/guibuycoins.png");
+    height: 30px;
+	left: 179px;
+	position: fixed;
+	top: 321px;
+	width: 40px;
+}
+
+.guiBalanceCartel360x480{
+	position: fixed;
+	background-image: url(../360x480/guibalancescreen.png);
+	top: 0px;
+	left: 0px;
+	height: 305px;
+	width: 360px;
+}
+
+.guiBalanceBuyButton360x480{
+	background-image: url("../360x480/guibalancemore.png");
+	height: 80px;
+	left: 165px;
+	position: fixed;
+	top: 220px;
+	width: 148px;
+}
+
+.guiBalanceOkButton360x480{
+	background-image: url("../360x480/guibalanceok.png");
+	height: 85px;
+	left: 4px;
+	position: fixed;
+	top: 220px;
+	width: 156px;
+}
+
+.guiBalanceCoins360x480{
+    font-family: Bubblegum;
+    font-size: 0.9em;
+    height: 30px;
+    left: 260px;
+    position: fixed;
+    top: 122px;
+    width: 100px;
+}
+
+.guiLoseAllLifes360x480{
+	background-image: url("../360x480/guiendgame.png");
+	height: 295px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+.guiLoseAllLifesOk360x480{
+    background-image: url("../360x480/guiendgameok.png");
+    height: 54px;
+    left: 74px;
+    position: fixed;
+    top: 369px;
+    width: 209px;
+}
+
+.guiLoseAllLifesBuy360x480{
+    background-image: url("../360x480/guiendgamebuy.png");
+    height: 110px;
+    left: 75px;
+    position: fixed;
+    top: 263px;
+    width: 210px;
+}
+
+.guiNoSoftgamesScreen360x480{
+	background-image: url(../360x480/guisoftgamesscreen.png);
+	position: fixed;
+	height: 292px;
+	width: 360px;
+	top: 0px;
+	left: 0px;
+}
+
+.guiNoSoftgamesButton360x480{
+	background-image: url(../360x480/guisoftgamesbutton.png);
+	position: fixed;
+	height: 116px;
+	width: 203px;
+	top: 215px;
+	left: 110px;
+}
+
+.guiNoInetErrorScreen360x480{
+	background-image: url("../360x480/guinoinetscreen.png");
+	height: 300px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+.guiNoInetErrorButton360x480{
+	background-image: url("../360x480/guinoinetbutton.png");
+	height: 76px;
+	left: 100px;
+	position: fixed;
+	top: 210px;
+	width: 210px;
+}
+
+.guiNoFaceErrorScreen360x480{
+	background-image: url("../360x480/guinofacescreen.png");
+	height: 309px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+.guiNoFaceErrorButton360x480{
+	background-image: url("../360x480/guinofacebutton.png");
+	height: 88px;
+	left: 100px;
+	position: fixed;
+	top: 210px;
+	width: 186px;
+}
+
+.guiPreviousScreen360x480{
+	background-image: url("../360x480/guipreviousscreen.png");
+	height: 288px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+
+.guiPreviousButton360x480{
+	background-image: url("../360x480/guipreviousbutton.png");
+	height: 119px;
+	left: 50px;
+	position: fixed;
+	top: 245px;
+	width: 233px;
+}
+
+.guiResolutionScreen360x480{
+	background-image: url("../360x480/guiresolutionscreen.png");
+	height: 306px;
+	left: 0px;
+	position: fixed;
+	top: 0px;
+	width: 360px;
+}
+
+.guiResolutionButton360x480{
+	background-image: url("../360x480/guiresolutionbutton.png");
+	height: 117px;
+	left: 124px;
+	position: fixed;
+	top: 210px;
+	width: 201px;
+}
+
+.guiNewLifesErrorScreen360x480{
+	background-image: url("../360x480/guilifeserrorscreen.png");
+	height: 264px;
+	left: 0px;
+	position: fixed;
+	top: 0px;
+	width: 360px;
+}
+
+.guiNewLifesErrorButton360x480{
+	background-image: url("../360x480/guilifeserrorbutton.png");
+	height: 114px;
+	left: 124px;
+	position: fixed;
+	top: 230px;
+	width: 193px;
+}
+
+
+.guiLooseMenu360x480{
+	background-image: url("../360x480/guimenu.png");
+	height: 58px;
+	left: 107px;
+	min-height: 20px;
+	position: fixed;
+	top: 402px;
+	width: 149px;
+}
+
+.guiBuyBombScreen360x480{
+	position: fixed;
+	background-image: url(../360x480/buybombcartel.png);
+	width: 360px;
+	height: 285px;
+	left: 0px;
+	top: 0px;
+}
+
+.guiBuyBombOk360x480{
+    background-image: url("../360x480/buybombok.png");
+    height: 78px;
+    left: 15px;
+    position: fixed;
+    top: 210px;
+    width: 175px;
+}
+
+.guiBuyBombNo360x480{
+    background-image: url("../360x480/buybombno.png");
+    height: 78px;
+    left: 160px;
+    position: fixed;
+    top: 205px;
+    width: 175px;
+}
+
+.guiBuyMultiScreen360x480{
+	position: fixed;
+	background-image: url(../360x480/buymulticartel.png);
+	width: 360px;
+	height: 285px;
+	left: 0px;
+	top: 0px;
+}
+
+.guiBuyMultiOk360x480{
+    background-image: url("../360x480/buymultiok.png");
+    height: 78px;
+    left: 15px;
+    position: fixed;
+    top: 210px;
+    width: 175px;
+}
+
+.guiBuyMultiNo360x480{
+    background-image: url("../360x480/buymultino.png");
+    height: 78px;
+    left: 160px;
+    position: fixed;
+    top: 205px;
+    width: 175px;
+}
+
+.guiBuyFreezeScreen360x480{
+	position: fixed;
+	background-image: url(../360x480/buyfreezecartel.png);
+	width: 360px;
+	height: 285px;
+	left: 0px;
+	top: 0px;
+}
+
+.guiBuyFreezeOk360x480{
+    background-image: url("../360x480/buyfreezeok.png");
+    height: 78px;
+    left: 15px;
+    position: fixed;
+    top: 210px;
+    width: 175px;
+}
+
+.guiBuyFreezeNo360x480{
+    background-image: url("../360x480/buyfreezeno.png");
+    height: 78px;
+    left: 160px;
+    position: fixed;
+    top: 205px;
+    width: 175px;
+}
+
+.uiAlert360x480{
+	font-family: Bubblegum;
+	font-size: 1.1em;
+	color: #644000;
+	position: fixed;
+	background-image: url(../backgrounddiv.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	left: 0px;
+	top: 0px;
+	padding: 0 0 0 0;
+}
+
+.uiAlertImage360x480{
+	background-image: url("../360x480/alertscreen.png");
+	height: 324px;
+	left: 0;
+	min-height: 263px;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+.uiAlertButton360x480{
+	background-image: url("../360x480/alertbutton.png");
+	display: table-cell;
+	height: 123px;
+	left: 73px;
+	max-width: 201px;
+	min-height: 117px;
+	position: fixed;
+	text-align: center;
+	top: 292px;
+	vertical-align: middle;
+	width: 213px;
+}
+
+.uiAlertButton360x480 > div {
+	height: 50px;
+	left: 30px;
+	position: absolute;
+	top: 40px;
+	width: 155px;
+}
+
+.uiAlertText360x480{
+	height: 104px;
+	left: 55px;
+	min-height: 50px;
+	position: absolute;
+	text-align: center;
+	top: 166px;
+	width: 247px;
+}
+
+.uiHighscoreImage360x480{
+	background-image: url("../360x480/highscorescreen.png");
+	height: 306px;
+	left: 0;
+	min-height: 306px;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+.uiHighscoreButton360x480{
+	background-image: url("../360x480/highscorebutton.png");
+	height: 116px;
+	left: 65px;
+	position: fixed;
+	top: 276px;
+	width: 193px;
+}
+
+.initScreen360x480{
+	background-image: url(../360x480/loadingscreen.png);
+}
+
+.uiPauseButton360x480{
+	background-image: url("../360x480/pausebutton.png");
+	height: 32px;
+	left: 310px;
+	min-height: 10px;
+	position: fixed;
+	top: 0;
+	width: 47px;
+}
+
+.uiPauseScreen360x480{
+	background-image: url("../360x480/pausecartel.png");
+	background-position: center top;
+	height: 480px;
+	left: 0;
+	min-height: 480px;
+	position: fixed;
+	top: 0;
+	width: 360px;
+}
+
+.leaderboard360x480{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(../360x480/leaderboardscreen.png);
+}
+
+.leaderboardTabs360x480{
+	position: absolute;
+	top: 180px;
+	left: 135px;
+	width: 158px;
+	height: 20px;
+	min-height: 20px;
+}
+
+.leaderboardTab360x480{ 
+	color: #644000;
+	font-family: bubblegum;
+	font-size: 0.8em;
+	height: 133px;
+	left: 86px;
+	min-height: 40px;
+	position: absolute;
+	top: 238px;
+	width: 200px;
+}
+
+.leaderboardTabHighscore360x480 { 
+	background-image: url("../360x480/leaderboardhighscore.png");
+	height: 25px;
+	left: 132px;
+	min-height: 20px;
+	position: absolute;
+	top: 177px;
+	width: 83px;
+}
+
+.leaderboardTabFriends360x480 { 
+	background-image: url("../360x480/leaderboardfriends.png");
+	height: 24px;
+	left: 212px;
+	min-height: 20px;
+	position: absolute;
+	top: 177px;
+	width: 83px;
+}
+
+.leaderboardBackMenu360x480 { 
+	background-image: url("../360x480/leaderboardmenu.png");
+	height: 66px;
+	left: 115px;
+	min-height: 65px;
+	position: absolute;
+	top: 388px;
+	width: 130px;
+}
+
+.leaderboardTabHighlight360x480
+{
+	height: 40px;
+}
+
+.optionsFacebook360x480 {
+	background-image: url("../360x480/optionsfacebook.png");
+	height: 54px;
+	left: 132px;
+	min-height: 61px;
+	position: fixed;
+	top: 250px;
+	width: 90px;
+}
+
+.optionsCoins360x480 {
+	background-image: url("../360x480/optionscoins.png");
+	height: 104px;
+	left: 198px;
+	min-height: 115px;
+	position: fixed;
+	top: 243px;
+	width: 104px;
+}
+
+.optionsLeaderboards360x480 {
+	background-image: url("../360x480/optionsleaderboard.png");
+	height: 78px;
+	left: 48px;
+	min-height: 92px;
+	position: fixed;
+	top: 265px;
+	width: 108px;
+}
+
+.optionsVolumeOn360x480 {
+    background-image: url("../360x480/optionsvolumenon.png");
+    height: 61px;
+    left: 132px;
+    min-height: 61px;
+    position: fixed;
+    top: 185px;
+    width: 92px;
+}
+
+.optionsVolumeOff360x480 {
+    background-image: url("../360x480/optionsvolumenoff.png");
+    height: 61px;
+    left: 194px;
+    min-height: 61px;
+    position: fixed;
+    top: 175px;
+    width: 92px;
+}
+
+.optionsMenu360x480 {
+	background-image: url("../360x480/optionsmenu.png");
+	height: 103px;
+	left: 150px;
+	min-height: 124px;
+	position: fixed;
+	top: 298px;
+	width: 85px;
+}
+
+.optionsLogout360x480 {
+    background-image: url("../360x480/optionslogout.png");
+    height: 124px;
+    left: 45px;
+    min-height: 124px;
+    position: fixed;
+    top: 313px;
+    width: 109px;
+}
