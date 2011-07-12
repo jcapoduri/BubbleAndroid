@@ -182,26 +182,21 @@ soundengine.setupbackground = function(file, duration){
 	soundengine.backgroundsound.duration = duration;
 };
 
-soundengine.startbackground = function(){
+soundengine.startbackground = function(){	
 	if(!soundengine.enable) return;
-	soundengine.backgroundsound.playing = true;
-	soundengine.backgroundsound.timer = setInterval(function(){ soundengine.backgroundsound.loop() }, soundengine.backgroundsound.duration);
 	soundengine.backgroundsound.loop();
 };
 
 soundengine.stopbackground = function(){
-	soundengine.backgroundsound.playing = false;
-	//clearTimeout(soundengine.backgroundsound.timer);
-	clearInterval(soundengine.backgroundsound.timer);
+	clearTimeout(soundengine.backgroundsound.timer);
 	soundengine.backgroundsound.media.stop();
 };
 
 soundengine.backgroundsound.loop = function(){
-	soundengine.backgroundsound.media.stop();
+	//soundengine.backgroundsound.media.stop();
 	if(!soundengine.enable) return;
-	if(!soundengine.backgroundsound.playing) return;
 	soundengine.backgroundsound.media.play();
-	//soundengine.backgroundsound.timer = setTimeout(function(){ soundengine.backgroundsound.loop() }, soundengine.backgroundsound.duration);
+	soundengine.backgroundsound.timer = setTimeout('soundengine.backgroundsound.loop()', soundengine.backgroundsound.duration);
 };
 
 soundengine.maintheme = {};
@@ -219,20 +214,18 @@ soundengine.setuptheme = function(file, duration){
 
 soundengine.starttheme = function(){
 	if(!soundengine.enable) return;
-	soundengine.themesound.playing = true;
-	soundengine.themesound.timer = setInterval(function(){ soundengine.themesound.loop() }, soundengine.themesound.duration);
+	soundengine.themesound.timer = setInterval('soundengine.themesound.loop()', soundengine.themesound.duration);
 	soundengine.themesound.loop();
 }; 
 
 soundengine.stoptheme = function(){
-	soundengine.themesound.playing = false;
 	clearInterval(soundengine.themesound.timer);
 	soundengine.themesound.media.stop();
 
 };
 
 soundengine.themesound.loop = function(){
-	soundengine.themesound.media.stop();
+	//soundengine.themesound.media.stop();
 	if(!soundengine.enable) return;
 	if(!soundengine.themesound.playing) return;
 	soundengine.themesound.media.play();
