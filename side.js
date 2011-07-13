@@ -259,7 +259,7 @@ function Loader(progress, size){
 		soundengine.addSound('specialpoints', 'sounds/fx/specialpoints.mp3');
 		soundengine.addSound('optionin', 'sounds/fx/optionin.mp3');
 		soundengine.addSound('hit', 'sounds/fx/hit.mp3');*/
-		/*soundengine.addSound('bounce', '/android_asset/www/sounds/fx/bounce.mp3');
+		soundengine.addSound('bounce', '/android_asset/www/sounds/fx/bounce.mp3');
 		soundengine.addSound('bubblethrow', '/android_asset/www/sounds/fx/bubblethrow.mp3');
 		soundengine.addSound('losesound', '/android_asset/www/sounds/fx/losesound.mp3');
 		soundengine.addSound('winsound', '/android_asset/www/sounds/fx/winsound.mp3');
@@ -268,7 +268,7 @@ function Loader(progress, size){
 		soundengine.addSound('pause', '/android_asset/www/sounds/fx/pause.mp3');
 		soundengine.addSound('specialpoints', '/android_asset/www/sounds/fx/specialpoints.mp3');
 		soundengine.addSound('optionin', '/android_asset/www/sounds/fx/optionin.mp3');
-		soundengine.addSound('hit', '/android_asset/www/sounds/fx/hit.mp3');*/
+		soundengine.addSound('hit', '/android_asset/www/sounds/fx/hit.mp3');
 		//soundengine.addSound('background', 'sounds/music/backgroundmusic.mp3');
 
 		/*soundengine.addTheme('maintheme', 'sounds/music/maintheme.mp3', 8000);

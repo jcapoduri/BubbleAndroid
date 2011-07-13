@@ -1473,9 +1473,9 @@ function bubbleLevel(w, h, bubblesWidth, bubblesHeight, lvlnbr){
 				}else{
 					soundengine.reproduceSound('normalpoints');
 				};
-			};*/
+			};
 			this.pointsMade = false;
-			this.specialPointsMade = false;
+			this.specialPointsMade = false;*/
 		};
 		for(var i = 0; i < this.animations.length; ++i){
 			this.animations[i].render();
@@ -2010,7 +2010,7 @@ function gameUI(w, h){
 	});
 
 	$(this.pauseElement).click(function(){
-		//soundengine.reproduceSound('pause');
+		soundengine.reproduceSound('pause');
 		cartel = document.createElement('div');
 		var waitscreen = document.createElement('div');
 		$(cartel).addClass('uiAlert' + gameSize);		
@@ -2181,7 +2181,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 		//hide menu
 		//this.menu.style.zIndex = this.menu.style.zIndex - 1;
 		this.menu.style.display = 'none';
-		//soundengine.stoptheme();
+		soundengine.stoptheme();
 		//soundengine.stopbackground();
 		//alert('hola');
 	};
@@ -2203,7 +2203,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 			this.clock.start();
 			this.menu.style.display = 'none';			
 		};
-		//soundengine.stoptheme();
+		soundengine.stoptheme();
 		//soundengine.stopbackground();
 	};
 
@@ -2312,7 +2312,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 
 	this.playerLoose = function(){
 		//alert('loose');
-		//soundengine.reproduceSound('losesound');
+		soundengine.reproduceSound('losesound');
 		game.level.clearBoard();
 
 		if(game.ui.lifes == 0){ // ask for more lifes!
@@ -2427,7 +2427,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 	};
 
 	this.playerWin = function(){
-		//soundengine.reproduceSound('winsound');
+		soundengine.reproduceSound('winsound');
 		api.leaderboard.saveok = game.ui.setRank;
 		
 		cartel = document.createElement('div');
@@ -2549,7 +2549,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 		game.clock.stop();
 		//this.menu.style.zIndex = 90//this.menu.style.zIndex + 2;
 		this.menu.style.display = 'block';
-		//soundengine.starttheme();
+		soundengine.starttheme();
 		//soundengine.startbackground();
 		/*soundengine.backgroundsound.playing = true;
 		soundengine.backgroundsound.loop();*/
