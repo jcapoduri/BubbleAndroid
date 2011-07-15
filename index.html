@@ -234,7 +234,7 @@ function connectToFacebook(){
 $(window).load(function () {	
 //SWFID: 2647
 //GUID: 3689729b4f17433c
-	setTimeout(function(){ window.scrollTo(0,1); }, 0);
+	//setTimeout(function(){ window.scrollTo(0,1); }, 0);
 	//ºloader.init();
 	if(window.localStorage.getItem('runned') == null){
 		firstRun = true;
@@ -447,7 +447,7 @@ loader.readyLoad = function(){
 		//soundengine.reproduceSound('background');
 };
 
-/*soundengine.soundToggled = function(){
+soundengine.soundToggled = function(){
 	if(soundengine.enable){
 		document.getElementById('optionsVolumeOn').style.display = "none";
 		document.getElementById('optionsVolumeOff').style.display = "block";
@@ -455,7 +455,7 @@ loader.readyLoad = function(){
 		document.getElementById('optionsVolumeOff').style.display = "none";
 		document.getElementById('optionsVolumeOn').style.display = "block";
 	};
-};*/
+};
 </script> 
 </body>
 </html>

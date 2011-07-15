@@ -794,7 +794,7 @@ function bubble(l){
 
 		if((this.x == this.lvl.leftBound) || (this.x >= this.lvl.width)){
 			this.dx = -this.dx;
-			soundengine.reproduceSound('bounce');
+			//soundengine.reproduceSound('bounce');
 		};
 		//if((currentBubble.dx == 0) || (currentBubble.dy == this.lvl.bubbleVelocity)) alert('es un hijo de puta a fuera: ' + culo);
 		if(this.y < (this.lvl.topBound + this.lvl.currentTop)){
@@ -828,7 +828,7 @@ function bubble(l){
 		//stop moving
 		this.dx = 0;
 		this.dy = 0;
-		soundengine.reproduceSound('hit');
+		//soundengine.reproduceSound('hit');
 		return; 
 	};
 
@@ -988,7 +988,7 @@ function bubbleCannon(lvl){
 		if(this.currentBubble.secondFlavor != '') game.ui.addMultiBubbleCount();*/
 		this.currentBubble = null;
 		this.chargeCannon();
-		soundengine.reproduceSound('bubblethrow');
+		//soundengine.reproduceSound('bubblethrow');
 	};
 
 	this.setReadyShoot = function(){
@@ -1466,7 +1466,7 @@ function bubbleLevel(w, h, bubblesWidth, bubblesHeight, lvlnbr){
 			this.shootedBubble.moveShooted();
 			//this.shootedBubble.move();//Shooted();
 			this.checkColisions();
-			if(this.pointsMade){
+			/*if(this.pointsMade){
 				if(this.specialPointsMade){
 					soundengine.reproduceSound('specialpoints');
 				}else{
@@ -1474,7 +1474,7 @@ function bubbleLevel(w, h, bubblesWidth, bubblesHeight, lvlnbr){
 				};
 			};
 			this.pointsMade = false;
-			this.specialPointsMade = false;
+			this.specialPointsMade = false;*/
 		};
 		for(var i = 0; i < this.animations.length; ++i){
 			this.animations[i].render();
@@ -1794,6 +1794,18 @@ function bubbleLevel(w, h, bubblesWidth, bubblesHeight, lvlnbr){
 				i++;
 			};			
 		};
+		var erase = this.grilla.Table[this.grilla.Table.length - 1];
+		var deleteMe = true;
+		for(var i = 0; i < erase.length; ++i){
+			deleteMe = deleteMe && ((erase[i] == "vacio") || (erase[i] == "nada"));
+		};
+
+		if(deleteMe && (this.grilla.alto > 18)){
+			var toDelete = this.grilla.Table.pop();
+			this.grilla.alto -= 1;
+			delete toDelete;
+			toDelete = null;
+		};
 
 		/*for(i = 0; i < ancho; ++i){
 			//alert(i);
@@ -1835,7 +1847,11 @@ function bubbleLevel(w, h, bubblesWidth, bubblesHeight, lvlnbr){
 			};
 			delete b;
 			b = null;
+			delete this.bubbles_array[i];
+			this.bubbles_array[i] = null;
 		};
+		delete this.bubbles_array;
+		this.bubbles_array = null;
 		for(var i = 0; i < this.animations.length; ++i){
 			var b = this.animations[i];
 			if(b.element){
@@ -1877,9 +1893,13 @@ function bubbleLevel(w, h, bubblesWidth, bubblesHeight, lvlnbr){
 
 	this.detonateBomb = function(detonated, neighbour){
 		//alert(detonated.i + ' : ' + detonated.j + '  neighbour: ' + neighbour);
-		if(neighbour == 0) return;
 		if(detonated == "nada" || detonated == "vacio") return;
-		if(detonated.flavor == "nula" || detonated == "techo") return;
+		if(detonated == "techo") return;
+		if(detonated.flavor == "nula") return;
+		if(neighbour == 0){
+			this.grilla.touchedBubbles.push(detonated);
+			return;
+		}; 
 		//alert(detonated.i + ' : ' + detonated.j + '  neighbour: ' + neighbour);
 		//if(detonated.marked) return;
 		
@@ -2175,13 +2195,14 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 		this.pointsCounter = 0;
 		this.ui.lifes = this.ui.initialLifes;
 		this.createLvl(1);
+
 		this.ui.refresh();
 		this.clock.start();
 		//hide menu
 		//this.menu.style.zIndex = this.menu.style.zIndex - 1;
 		this.menu.style.display = 'none';
 		soundengine.stoptheme();
-		soundengine.stopbackground();
+		//soundengine.stopbackground();
 		//alert('hola');
 	};
 
@@ -2190,6 +2211,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 		if(game.level == ''){
 			//alert('level = nada');
 			if(!this.loadedLevel){
+				api.ui.showWaiting();
 				api.levels.onGetLevel = this.loadPreviousGame;
 				this.loadedLevel = true;				
 				api.levels.getLevel(api.facebook.user.id);
@@ -2203,18 +2225,22 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 			this.menu.style.display = 'none';			
 		};
 		soundengine.stoptheme();
-		soundengine.stopbackground();
+		//soundengine.stopbackground();
 	};
 
 	this.loadPreviousGame = function(){
 		//alert("loadPreviousGame");
+		api.ui.hideWaiting();
 		if(api.levels.jsonlevel === ""){
 			//alert("wepa!");
 			//api.ui.alert("I can't find any previous game, you need to start from the begginig!", 'Ok, lets go for it!');
 			api.ui.alertStyle('guiPreviousScreen', 'guiPreviousButton');
 			return;
 		};
-		if(!api.levels.unserializeLevel()) return;
+		if(!api.levels.unserializeLevel()){
+			//alert('hola');
+			return;
+		};// return;
 		//chequeo si esta en ganar o perder
 		//gano
 		//alert('check win');
@@ -2311,7 +2337,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 
 	this.playerLoose = function(){
 		//alert('loose');
-		soundengine.reproduceSound('losesound');
+		//soundengine.reproduceSound('losesound');
 		game.level.clearBoard();
 
 		if(game.ui.lifes == 0){ // ask for more lifes!
@@ -2396,8 +2422,8 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 				$(cartel).fadeOut(300, function(){
 					game.ui.lifes -= 1;					
 					if(game.ui.lifes == -1){
-						game.level.clearBoard();
-						//game.level = {};
+						/*game.level.clearBoard();
+						game.level = null;*/
 						game.level = '';
 						game.ui.lifes = 5;
 						game.ui.points = 0;
@@ -2426,7 +2452,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 	};
 
 	this.playerWin = function(){
-		soundengine.reproduceSound('winsound');
+		//soundengine.reproduceSound('winsound');
 		api.leaderboard.saveok = game.ui.setRank;
 		
 		cartel = document.createElement('div');
@@ -2506,7 +2532,8 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 
 		$(continueButton).click(function(){
 			$(cartel).fadeOut(300, function(){
-				game.level.clearBoard();
+				/*game.level.clearBoard();
+				game.level = null;*/
 				game.doSerialize = true;
 				//api.facebook.postMessage(api.facebook.user.name + " has got " + game.ui.points + " points in Bubble Paradise! Come with him and enjoy togheter in the paradise!");
 				//api.facebook.postMessage(api.facebook.user.name + " has got " + game.ui.points + " points in Bubble Paradise! Come with him and enjoy togheter in the paradise!");
@@ -2549,7 +2576,7 @@ function appEnviroment(canvasObj, menuObj, navObj, size){
 		//this.menu.style.zIndex = 90//this.menu.style.zIndex + 2;
 		this.menu.style.display = 'block';
 		soundengine.starttheme();
-		soundengine.startbackground();
+		//soundengine.startbackground();
 		/*soundengine.backgroundsound.playing = true;
 		soundengine.backgroundsound.loop();*/
 		if(this.doSerialize){
